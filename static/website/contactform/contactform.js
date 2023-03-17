@@ -95,24 +95,25 @@ jQuery(document).ready(function($) {
       action = 'contactform/contactform.php';
     }
     $.ajax({
-      type: "POST",
-      url: action,
-      data: str,
-      success: function(msg) {
-        // alert(msg);
-        if (msg == 'OK') {
-          $("#sendmessage").addClass("show");
-          $("#errormessage").removeClass("show");
-          $('.contactForm').find("input, textarea").val("");
+      type: 'POST',
+      url: url,
+      data: form.serialize(),
+      dataType: 'json',
+      success: function(data) {
+        if (data.success) {
+          // show success message and clear form fields
+          $('#sendmessage').show();
+          form.find('input,textarea').val('');
         } else {
-          $("#sendmessage").removeClass("show");
-          $("#errormessage").addClass("show");
-          $('#errormessage').html(msg);
+          // show error message
+          $('#errormessage').show();
         }
-
+      },
+      error: function() {
+          // show error message
+          $('#errormessage').show();
       }
     });
-    return false;
-  });
+});
 
 });

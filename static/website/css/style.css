@@ -700,9 +700,11 @@ a:hover {
 
 .service-box {
   background-color: #fff;
-  padding: 2.5rem 1.3rem;
+  padding: 2.5rem .7rem;
   border-radius: 1rem;
   margin-bottom: 3rem;
+  position: relative;
+  height: 90%;
 }
 
 .service-box:hover .ico-circle {
@@ -711,8 +713,8 @@ a:hover {
 }
 
 .service-box .service-ico {
+  text-align:center;
   margin-bottom: 1rem;
-  color: #1e1e1e;
 }
 
 .service-box .ico-circle {
@@ -725,10 +727,14 @@ a:hover {
 }
 
 .service-box .s-title {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   text-transform: uppercase;
   text-align: center;
-  padding: .4rem 0;
+  position: absolute;
+  bottom: 8%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 
 .service-box .s-description {
@@ -763,6 +769,18 @@ a:hover {
 /*======================================
 //--//-->   PORTFOLIO
 ======================================*/
+
+.resume-box {
+  margin-bottom: 1rem;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background-color: #fff;
+}
+
+.resume-box:hover img {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+}
 
 .work-box {
   margin-bottom: 3rem;

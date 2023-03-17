@@ -9,7 +9,7 @@
   <meta content="" name="description">
 
   <!-- Favicons -->
-  <link href="{% static 'website/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'website/img/favicon.ico' %}" rel="icon">
   <link href="{% static 'website/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
   <!-- Bootstrap CSS File -->
@@ -63,7 +63,7 @@
   <!--/ Nav End /-->
 
   <!--/ Intro Skew Star /-->
-  <div id="home" class="intro route bg-image" style="background-image: url(../../../static/website/img/IMG_20200525_180233_MP.jpg)">
+  <div id="home" class="intro route bg-image" style="background-image: url(../../../static/website/img/IMG_20200527_123402_MP.jpg)">
     <div class="overlay-itro"></div>
     <div class="intro-content display-table">
       <div class="table-cell">
@@ -75,7 +75,6 @@
     </div>
   </div>
   <!--/ Intro Skew End /-->
-
   <section id="about" class="about-mf sect-pt4 route">
     <div class="container">
       <div class="row">
@@ -96,8 +95,9 @@
                     <div class="about-info">
                       <br>
                       <p><span class="title-s">Name: </span> <span>Matthew Stockdale</span></p>
-                      <p><span class="title-s">Email: </span> <span>millionairematt@gmail.com</span></p>
+                      <p><span class="title-s">Email: </span> <a href="mailto:millionairematt@gmail.com"><span>millionairematt@gmail.com</span></a></p>
                       <p><span class="title-s">Phone: </span> <span>(409) 916-2219</span></p>
+                      <p><span class="title-s">Github: </span> <a href="https://github.com/troxed"><span>Troxed</span></a></p>
                     </div>
                   </div>
                   <p>
@@ -143,75 +143,57 @@
       <div class="row">
         <div class="col-md-4">
           <div class="service-box">
-            <div style="text-align:center;" class="service-ico">
-                <img src="{% static 'website/img/NASA_logo.svg' %}" style="width: 50%; height: 50%;">
+            <div class="service-ico">
+                <img src="{% static 'website/img/NASA_logo.svg' %}" style="width: 60%">
             </div>
-            <div class="service-content">
-              <h3 class="s-title">IT Support</h3>
-              <p class="s-description text-center">
-
-              </p>
-            </div>
+            <h2 class="s-title">IT Support</h2>
           </div>
         </div>
         <div class="col-md-4">
           <div class="service-box">
-            <div style="text-align:center;" class="service-ico">
-                <img src="{% static 'website/img/Chevron_Logo.svg' %}" style="width: 37.5%; height: 37.5%;">
+            <div class="service-ico">
+                <img src="{% static 'website/img/Chevron_Logo.svg' %}" style="width: 40%">
             </div>
-            <div class="service-content">
-              <h2 class="s-title">IT Dispatcher</h2>
-              <p class="s-description text-center">
-
-              </p>
-            </div>
+            <h2 class="s-title">Support Analyst</h2>
           </div>
         </div>
         <div class="col-md-4">
           <div class="service-box">
-            <div style="text-align:center;" class="service-ico">
-                <img src="{% static 'website/img/ST_logo.svg' %}" style="width: 75%; height: 75%;">
+            <div class="service-ico">
+                <img src="{% static 'website/img/IH_logo.png' %}" style="width: 90%; padding-top: 1rem">
             </div>
-            <div class="service-content">
-              <h2 class="s-title">Partner</h2>
-              <p class="s-description text-center">
-
-              </p>
-            </div>
+            <h2 class="s-title">IT Director</h2>
           </div>
         </div>
         <div class="col-md-4">
           <div class="service-box">
-            <div style="text-align:center;" class="service-ico">
-                <img src="{% static 'website/img/IH_logo.png' %}" style="width: 100%; height: 100%;">
+            <div class="service-ico">
+                <img src="{% static 'website/img/Reboot_logo.webp' %}" style="width: 80%">
             </div>
-            <div class="service-content">
-              <h2 class="s-title">IT Director</h2>
-              <p class="s-description text-center">
-
-              </p>
-            </div>
+            <h2 class="s-title">IT Specialist</h2>
           </div>
         </div>
         <div class="col-md-4">
           <div class="service-box">
-            <div style="text-align:center;" class="service-ico">
-                <img src="{% static 'website/img/Reboot_logo.webp' %}" style="width: 77%; height: 77%;">
+            <div class="service-ico">
+                <img src="{% static 'website/img/ST_logo.svg' %}" style="width: 75%">
             </div>
-            <div class="service-content">
-              <h2 class="s-title">IT Specialist</h2>
-            </div>
+              <h2 class="s-title">IT Consultant</h2>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="service-box">
-            <div style="text-align:center;" class="service-ico">
-              <img src="{% static 'website/img/resume.png' %}" style="width: 39%; height: 39%;">
-            </div>
-            <div class="service-content">
+          <a href="{% static 'website/img/resume.pdf' %}" target="_blank" onclick="window.open('{% static 'website/img/resume.pdf' %}', 'resume', 'width=800,height=600'); return false;">
+            <div class="service-box">
+              <div class="service-ico">
+                <div class="resume-box">
+                  <div class="work-img" style="overflow: visible">
+                    <img src="{% static 'website/img/resume.png' %}" class="img-fluid" style="width: 38%">
+                  </div>
+                </div>
+              </div>
               <h2 class="s-title">Resume</h2>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>
@@ -307,6 +289,7 @@
                         <li>Postgresql</li>
                         <li>AWS S3, SES</li>
                         <li>Railway</li>
+                        <li>Machine learning</li>
                       </ul>
                     </div>
                   </div>
@@ -338,7 +321,8 @@
                     </h5>
                   </div>
                   <div>
-                      <form action="" method="post" role="form" class="contactForm">
+                    <form action="{% url 'send_email' %}" method="post" role="form" class="contactForm">
+                      {% csrf_token %}
                       <div id="sendmessage">Your message has been sent. Thank you!</div>
                       <div id="errormessage"></div>
                       <div class="row">
@@ -368,12 +352,19 @@
                         </div>
                         <div class="col-md-12">
                           <button type="submit" class="button button-a button-big button-rounded">Send Message</button>
+                          {% if messages %}
+                              {% for message in messages %}
+                                <div>
+                                  {{ message }}
+                                </div>
+                              {% endfor %}
+                          {% endif %}
                         </div>
-                      </div>
+                        </div>
                     </form>
                   </div>
                 </div>
-                <div class="col-md-6">
+                 <div class="col-md-6">
                   <div class="title-box-2 pt-4 pt-md-0">
                     <h5 class="title-left">
                       Get in Touch
@@ -381,23 +372,18 @@
                   </div>
                   <div class="more-info">
                     <p class="lead">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolorum dolorem soluta quidem
-                      expedita aperiam aliquid at.
-                      Totam magni ipsum suscipit amet? Autem nemo esse laboriosam ratione nobis
-                      mollitia inventore?
+                      You can send me a message using the form, or use one of my contact links below.
                     </p>
                     <ul class="list-ico">
-                      <li><span class="ion-ios-location"></span> 329 WASHINGTON ST BOSTON, MA 02108</li>
-                      <li><span class="ion-ios-telephone"></span> (617) 557-0089</li>
-                      <li><span class="ion-email"></span> contact@example.com</li>
+                      <li><span class="ion-ios-location"></span> Indianapolis, Indiana</li>
+                      <li><span class="ion-ios-telephone"></span> (409) 916-2219</li>
+                      <li><span class="ion-email"></span><a href="mailto:millionairematt@gmail.com">millionairematt@gmail.com</a></li>
                     </ul>
                   </div>
                   <div class="socials">
                     <ul>
-                      <li><a href=""><span class="ico-circle"><i class="ion-social-facebook"></i></span></a></li>
-                      <li><a href=""><span class="ico-circle"><i class="ion-social-instagram"></i></span></a></li>
-                      <li><a href=""><span class="ico-circle"><i class="ion-social-twitter"></i></span></a></li>
-                      <li><a href=""><span class="ico-circle"><i class="ion-social-pinterest"></i></span></a></li>
+                      <li><a href="https://github.com/troxed"><span class="ico-circle"><i class="ion-social-github"></i></span></a></li>
+                      <li><a href="mailto:millionairematt@gmail.com"><span class="ico-circle"><i class="ion-android-mail"></i></span></a></li>
                     </ul>
                   </div>
                 </div>
@@ -411,7 +397,6 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
-
           </div>
         </div>
       </div>
